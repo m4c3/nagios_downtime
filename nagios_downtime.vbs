@@ -107,8 +107,8 @@ webServer = ""
 ' This option is only being recognized when it is not the default port for the
 ' choosen protocol in "webProto" option
 webPort = 80
-' Web path to Nagios cgi-bin (example: /nagios/cgi-bin) (NO trailing slash!)
-' In case of Icinga this would be "/icinga/cgi-bin" by default
+# Web path to Nagios cgi-bin (example: /nagios/cgi-bin) (NO trailing slash!)
+# Or if type is multisite, path to multisite (e.g. /check_mk)
 basePath = "/nagios/cgi-bin"
 
 ' User to take for authentication and author to enter the downtime (example:
@@ -1063,7 +1063,7 @@ Function parseMultisiteData(data)
 End Function
 
 ' Funktion zum Test, ob ein Rechner per Ping erreichbar ist
-' Übergabeparameter: IP oder Hostname
+' Ãœbergabeparameter: IP oder Hostname
 Function PingTest(strHostOrIP)
     Dim strCommand, objSh
     Set objSh = CreateObject("WScript.Shell")
